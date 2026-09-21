@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-background text-textMain antialiased m-0 font-sans;
+  }
+}
+
+@layer components {
+  /* Glassmorphism utility for modern sleek look */
+  .glass {
+    @apply bg-surface/70 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+
+  /* Custom scrollbar for a premium feel */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surfaceHover rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
